@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap");
 
 * {
 	box-sizing: border-box;
@@ -237,7 +237,7 @@ input {
 }
 
 /* Extra style for mobile tab buttons */
-button.active-tab {
+/* button.active-tab {
 	background-color: #1976d2;
 	color: white;
 }
@@ -265,8 +265,8 @@ button.active-tab {
   .sign-up-container {
     display: none !important;
   }
-}
+} */
 
 
 
-
+ 

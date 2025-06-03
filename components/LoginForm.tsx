@@ -1,24 +1,44 @@
 import React from "react";
 
-interface LoginFormProps {
-	isMobile?: boolean;
-}
-
-const LoginForm: React.FC<LoginFormProps> = ({ isMobile = false }) => {
+const LoginForm: React.FC = () => {
 	return (
-		<div className={`form-container ${isMobile ? "mobile-form" : "sign-in-container"}`}>
-			<form action="#">
-				<h1>Sign in</h1>
-				<div className="social-container">
-					<a href="#" className="social"><i className="fab fa-facebook-f"></i></a>
-					<a href="#" className="social"><i className="fab fa-google-plus-g"></i></a>
-					<a href="#" className="social"><i className="fab fa-linkedin-in"></i></a>
+		<div className="w-full h-full flex items-center justify-center bg-[#121212] text-white">
+			<form className="w-3/4 max-w-sm flex flex-col text-center">
+				<h1 className="text-2xl font-bold mb-4">Sign in</h1>
+
+				<div className="flex justify-center mb-4">
+					<a href="#" className="border border-gray-400 rounded-full h-10 w-10 flex items-center justify-center mx-1">
+						<i className="fab fa-facebook-f"></i>
+					</a>
+					<a href="#" className="border border-gray-400 rounded-full h-10 w-10 flex items-center justify-center mx-1">
+						<i className="fab fa-google-plus-g"></i>
+					</a>
+					<a href="#" className="border border-gray-400 rounded-full h-10 w-10 flex items-center justify-center mx-1">
+						<i className="fab fa-linkedin-in"></i>
+					</a>
 				</div>
-				<span>or use your account</span>
-				<input type="email" placeholder="Email" />
-				<input type="password" placeholder="Password" />
-				<a href="#">Forgot your password?</a>
-				<button>Sign In</button>
+
+				<span className="text-sm text-gray-300 mb-2">or use your account</span>
+
+				<input
+					type="email"
+					placeholder="Email"
+					className="bg-[#1e1e1e] text-white px-4 py-3 my-2 rounded"
+				/>
+				<input
+					type="password"
+					placeholder="Password"
+					className="bg-[#1e1e1e] text-white px-4 py-3 my-2 rounded"
+				/>
+
+				<a href="#" className="text-blue-300 text-sm mt-2 mb-4 hover:underline">Forgot your password?</a>
+
+				<button
+					type="submit"
+					className="rounded-full bg-blue-900 border border-blue-900 text-white font-semibold py-3 px-12 uppercase tracking-wide hover:bg-blue-800 transition-transform active:scale-95"
+				>
+					Sign In
+				</button>
 			</form>
 		</div>
 	);
