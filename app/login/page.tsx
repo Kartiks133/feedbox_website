@@ -1,9 +1,10 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Signup from "./Signup";
-import "./Login.css";
-import LoginForm from "./LoginForm";
+import Signup from "../../components/Signup";
+import "../../components/Login.css";
+import LoginForm from "../../components/LoginForm";
+import { useRouter } from "next/navigation";
 
 const Login = () => {
 	const [isRightPanelActive, setIsRightPanelActive] = useState(false);
@@ -32,6 +33,8 @@ const Login = () => {
 			document.head.removeChild(link);
 		};
 	}, []);
+
+	const router = useRouter();
 
 	if (isMobile) {
 		return (
@@ -65,6 +68,23 @@ const Login = () => {
 	// ✅ DESKTOP layout (unchanged)
 	return (
 		<div>
+			<button
+				onClick={() => router.push("/")}
+				style={{
+					position: "absolute",
+					top: "20px",
+					right: "30px",
+					fontSize: "24px",
+					background: "transparent",
+					border: "none",
+					color: "white",
+					cursor: "pointer",
+					zIndex: 9999,
+				}}
+			>
+				✕
+			</button>
+
 			<div
 				className={`container ${
 					isRightPanelActive ? "right-panel-active" : ""
